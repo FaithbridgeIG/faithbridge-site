@@ -33,6 +33,7 @@ export default function FaithBridgeComingSoonPage() {
     if (!hasAttemptedSubmit.current) return;
     setIsSubmitting(false);
     setSubmitMessage('Thanks — you’re on the list. We’ll be in touch soon.');
+    hasAttemptedSubmit.current = false;
   }
 
   const trustBadges = [
@@ -118,11 +119,11 @@ export default function FaithBridgeComingSoonPage() {
 
       <div className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#f6f1e8]/65 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
-          <div className="flex items-center px-2 py-1">
+          <div className="flex items-center">
             <img
               src={LOGO_SRC}
               alt="FaithBridge Insurance logo"
-              className="h-14 w-auto object-contain"
+              className="h-9 w-auto max-w-[140px] object-contain"
             />
           </div>
 
@@ -364,7 +365,49 @@ export default function FaithBridgeComingSoonPage() {
           <h3 className="mt-4 font-serif text-4xl text-[#3f352e] md:text-5xl">
             Be among the first to experience FaithBridge Insurance.
           </h3>
-          <div className="mx-auto mt-8 grid max-w-lg grid-cols-3 gap-4">
+
+          <div className="mx-auto mt-8 max-w-xl">
+            <form
+              onSubmit={handleLaunchSubmit}
+              action={FORM_ENDPOINT}
+              method="POST"
+              target="launch-form-target"
+              className="flex flex-col gap-3 sm:flex-row"
+            >
+              <input
+                type="text"
+                name="_honey"
+                style={{ display: 'none' }}
+                tabIndex={-1}
+                autoComplete="off"
+              />
+              <input type="hidden" name="_subject" value="Launch Update Request" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+
+              <input
+                name="email"
+                type="email"
+                required
+                placeholder="Enter your email for launch updates"
+                className="flex-1 rounded-[1rem] border border-[#e5dbcf] bg-white px-4 py-3.5 text-[#2f2b27] outline-none placeholder:text-[#81776d]"
+              />
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="rounded-[1rem] bg-[#32443a] px-6 py-3.5 text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#28372f] disabled:opacity-70"
+              >
+                {isSubmitting ? 'Sending...' : 'Get Launch Updates'}
+              </button>
+            </form>
+
+            {submitMessage ? (
+              <p className="mt-3 text-sm text-[#5f5851]">{submitMessage}</p>
+            ) : null}
+          </div>
+
+          <div className="mx-auto mt-10 grid max-w-lg grid-cols-3 gap-4">
             {[
               { value: String(days).padStart(2, '0'), label: 'Days' },
               { value: String(hours).padStart(2, '0'), label: 'Hours' },
