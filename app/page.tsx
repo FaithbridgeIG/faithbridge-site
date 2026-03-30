@@ -123,7 +123,7 @@ export default function FaithBridgeComingSoonPage() {
             <img
               src={LOGO_SRC}
               alt="FaithBridge Insurance logo"
-              className="h-9 w-auto max-w-[140px] object-contain"
+              className="h-14 w-auto object-contain"
             />
           </div>
 
