@@ -62,25 +62,29 @@ export default function FaithBridgeComingSoonPage() {
   const polaroids = [
     {
       title: 'Policy Review',
-      image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      image:
+        'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1200',
       note: 'A thoughtful review of your current coverage so the details match the life you are living now.',
       rotation: '-rotate-1',
     },
     {
       title: 'First Home Insurance',
-      image: 'https://images.pexels.com/photos/7578860/pexels-photo-7578860.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      image:
+        'https://images.pexels.com/photos/7578860/pexels-photo-7578860.jpeg?auto=compress&cs=tinysrgb&w=1200',
       note: 'Protection that helps new homeowners feel steady, informed, and ready for what comes next.',
       rotation: 'rotate-1',
     },
     {
       title: 'Commercial Coverage',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      image:
+        'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200',
       note: 'Coverage solutions for growing businesses, daily operations, and the momentum behind a new venture.',
       rotation: '-rotate-1',
     },
     {
       title: 'Personal Consultation',
-      image: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      image:
+        'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1200',
       note: 'A calm, personal conversation about what matters most and how to protect it with confidence.',
       rotation: 'rotate-1',
     },
@@ -114,9 +118,14 @@ export default function FaithBridgeComingSoonPage() {
 
       <div className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#f6f1e8]/65 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
-          <div className="flex items-center gap-3 rounded-full border border-[#d8ccb8] bg-white/90 px-4 py-2 shadow-sm">
-            <img src={LOGO_SRC} alt="FaithBridge Insurance Group logo" className="h-10 w-auto object-contain" />
+          <div className="flex items-center px-2 py-1">
+            <img
+              src={LOGO_SRC}
+              alt="FaithBridge Insurance logo"
+              className="h-14 w-auto object-contain"
+            />
           </div>
+
           <div className="hidden items-center gap-6 text-[11px] uppercase tracking-[0.28em] text-[#7b7269] md:flex">
             <span>Home</span>
             <span>Family</span>
@@ -170,12 +179,16 @@ export default function FaithBridgeComingSoonPage() {
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-white/84 md:text-xl">
-                FaithBridge helps homeowners, families, and business owners find coverage that feels clear, personal, and rooted in trust.
+                FaithBridge helps homeowners, families, and business owners find coverage that
+                feels clear, personal, and rooted in trust.
               </p>
 
               <div className="mt-8 flex max-w-3xl flex-wrap gap-3 text-[11px] uppercase tracking-[0.28em] text-white/80">
                 {trustBadges.map((badge) => (
-                  <span key={badge} className="rounded-full border border-white/18 bg-white/10 px-4 py-2 backdrop-blur-sm">
+                  <span
+                    key={badge}
+                    className="rounded-full border border-white/18 bg-white/10 px-4 py-2 backdrop-blur-sm"
+                  >
                     {badge}
                   </span>
                 ))}
@@ -189,7 +202,13 @@ export default function FaithBridgeComingSoonPage() {
                   target="launch-form-target"
                   className="flex flex-col gap-3 sm:flex-row"
                 >
-                  <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+                  <input
+                    type="text"
+                    name="_honey"
+                    style={{ display: 'none' }}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
                   <input type="hidden" name="_subject" value="Launch Update Request" />
                   <input type="hidden" name="_template" value="table" />
                   <input type="hidden" name="_captcha" value="false" />
@@ -208,7 +227,9 @@ export default function FaithBridgeComingSoonPage() {
                     {isSubmitting ? 'Sending...' : 'Get Launch Updates'}
                   </button>
                 </form>
-                {submitMessage ? <p className="px-1 pt-3 text-sm text-white/88">{submitMessage}</p> : null}
+                {submitMessage ? (
+                  <p className="px-1 pt-3 text-sm text-white/88">{submitMessage}</p>
+                ) : null}
               </div>
             </motion.div>
 
@@ -219,16 +240,29 @@ export default function FaithBridgeComingSoonPage() {
               className="hidden lg:block"
             >
               <div className="ml-auto max-w-md rounded-[2rem] border border-white/20 bg-[rgba(255,250,243,0.88)] p-6 shadow-[0_30px_90px_rgba(33,24,18,0.18)] backdrop-blur-md">
-                <p className="text-[11px] uppercase tracking-[0.32em] text-[#9d7d53]">Why FaithBridge</p>
+                <p className="text-[11px] uppercase tracking-[0.32em] text-[#9d7d53]">
+                  Why FaithBridge
+                </p>
                 <div className="mt-5 grid gap-4">
                   <div className="rounded-[1.5rem] bg-white/80 p-5 shadow-sm">
-                    <p className="font-serif text-2xl leading-tight text-[#32443a]">Coverage guidance that feels personal, calm, and clear.</p>
+                    <p className="font-serif text-2xl leading-tight text-[#32443a]">
+                      Coverage guidance that feels personal, calm, and clear.
+                    </p>
                   </div>
                   <div className="grid grid-cols-3 gap-3">
-                    {[['01', 'Homes'], ['02', 'Families'], ['03', 'Business']].map(([value, label]) => (
-                      <div key={label} className="rounded-[1.25rem] border border-[#eadfd1] bg-white p-4 text-center">
+                    {[
+                      ['01', 'Homes'],
+                      ['02', 'Families'],
+                      ['03', 'Business'],
+                    ].map(([value, label]) => (
+                      <div
+                        key={label}
+                        className="rounded-[1.25rem] border border-[#eadfd1] bg-white p-4 text-center"
+                      >
                         <p className="font-serif text-2xl text-[#32443a]">{value}</p>
-                        <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-[#7c736b]">{label}</p>
+                        <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-[#7c736b]">
+                          {label}
+                        </p>
                       </div>
                     ))}
                   </div>
@@ -253,7 +287,9 @@ export default function FaithBridgeComingSoonPage() {
               <div className="rounded-[2rem] border border-[#ebe0d3] bg-white/95 shadow-[0_20px_50px_rgba(77,55,38,0.08)] transition-all hover:shadow-[0_28px_60px_rgba(77,55,38,0.12)]">
                 <div className="p-7">
                   <div className="mb-5 h-px w-14 bg-[#cda44d]" />
-                  <h3 className="font-serif text-[28px] leading-tight text-[#32443a]">{item.title}</h3>
+                  <h3 className="font-serif text-[28px] leading-tight text-[#32443a]">
+                    {item.title}
+                  </h3>
                   <p className="mt-4 text-[15px] leading-7 text-[#6f665d]">{item.desc}</p>
                 </div>
               </div>
@@ -265,12 +301,15 @@ export default function FaithBridgeComingSoonPage() {
       <section className="mx-auto max-w-6xl px-6 py-24 lg:px-12">
         <div className="grid items-start gap-12 lg:grid-cols-[0.88fr_1.12fr]">
           <div>
-            <p className="text-[11px] uppercase tracking-[0.3em] text-[#9d7d53]">A better way to buy insurance</p>
+            <p className="text-[11px] uppercase tracking-[0.3em] text-[#9d7d53]">
+              A better way to buy insurance
+            </p>
             <h2 className="mt-5 font-serif text-4xl leading-[1.04] tracking-[-0.03em] text-[#3f352e] md:text-6xl">
               More clarity. More confidence. More care.
             </h2>
             <p className="mt-6 max-w-md text-lg leading-8 text-[#6f665d]">
-              We believe insurance should feel less transactional and more like trusted guidance for the people, places, and plans that matter most.
+              We believe insurance should feel less transactional and more like trusted guidance
+              for the people, places, and plans that matter most.
             </p>
 
             <div className="mt-10 grid gap-4">
@@ -279,7 +318,10 @@ export default function FaithBridgeComingSoonPage() {
                 'Built around simple explanations, thoughtful advice, and dependable service.',
                 'Created to feel approachable, warm, and genuinely helpful from the start.',
               ].map((line) => (
-                <div key={line} className="rounded-[1.5rem] border border-[#e7dbce] bg-[#fbf8f3] px-5 py-4 text-sm leading-7 text-[#5f5851] shadow-sm">
+                <div
+                  key={line}
+                  className="rounded-[1.5rem] border border-[#e7dbce] bg-[#fbf8f3] px-5 py-4 text-sm leading-7 text-[#5f5851] shadow-sm"
+                >
                   {line}
                 </div>
               ))}
@@ -298,7 +340,11 @@ export default function FaithBridgeComingSoonPage() {
               >
                 <div className="absolute -top-2 left-1/2 h-5 w-14 -translate-x-1/2 rotate-[-4deg] rounded-sm bg-[#e8ddcf] shadow-md" />
                 <div className="overflow-hidden rounded-sm border border-[#efe4d7] bg-white">
-                  <img src={item.image} alt={item.title} className="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  />
                 </div>
                 <div className="px-2 pb-2 pt-4 text-center">
                   <h4 className="font-serif text-2xl text-[#32443a]">{item.title}</h4>
@@ -312,17 +358,26 @@ export default function FaithBridgeComingSoonPage() {
 
       <section className="mx-auto max-w-5xl px-6 pb-20 lg:px-12">
         <div className="rounded-[2.5rem] border border-[#eadfd2] bg-[linear-gradient(180deg,#fffaf4_0%,#f6efe6_100%)] px-8 py-12 text-center shadow-[0_30px_70px_rgba(78,56,39,0.08)]">
-          <p className="text-[11px] uppercase tracking-[0.28em] text-[#9d7d53]">Launching May 1, 2026</p>
-          <h3 className="mt-4 font-serif text-4xl text-[#3f352e] md:text-5xl">Be among the first to experience FaithBridge Insurance.</h3>
+          <p className="text-[11px] uppercase tracking-[0.28em] text-[#9d7d53]">
+            Launching May 1, 2026
+          </p>
+          <h3 className="mt-4 font-serif text-4xl text-[#3f352e] md:text-5xl">
+            Be among the first to experience FaithBridge Insurance.
+          </h3>
           <div className="mx-auto mt-8 grid max-w-lg grid-cols-3 gap-4">
             {[
               { value: String(days).padStart(2, '0'), label: 'Days' },
               { value: String(hours).padStart(2, '0'), label: 'Hours' },
               { value: String(minutes).padStart(2, '0'), label: 'Minutes' },
             ].map((item) => (
-              <div key={item.label} className="rounded-[1.5rem] border border-[#eadfd1] bg-white/85 px-4 py-5 shadow-sm">
+              <div
+                key={item.label}
+                className="rounded-[1.5rem] border border-[#eadfd1] bg-white/85 px-4 py-5 shadow-sm"
+              >
                 <p className="font-serif text-3xl text-[#32443a]">{item.value}</p>
-                <p className="mt-1 text-[11px] uppercase tracking-[0.24em] text-[#7b7269]">{item.label}</p>
+                <p className="mt-1 text-[11px] uppercase tracking-[0.24em] text-[#7b7269]">
+                  {item.label}
+                </p>
               </div>
             ))}
           </div>
