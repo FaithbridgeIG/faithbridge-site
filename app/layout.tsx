@@ -1,3 +1,5 @@
+import './globals.css';
+
 export const metadata = {
   title: 'FaithBridge Insurance',
   description: 'FaithBridge Insurance launch site',
