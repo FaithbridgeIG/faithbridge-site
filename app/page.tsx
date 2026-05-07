@@ -417,6 +417,13 @@ export default function FaithBridgeComingSoonPage() {
                 </p>
               </div>
             ))}
+          </div>          <div className="mt-8 flex justify-center gap-6 text-sm text-[#5f5851]">
+            <a href="/privacy-policy" className="underline">
+              Privacy Policy
+            </a>
+            <a href="/terms-and-conditions" className="underline">
+              Terms & Conditions
+            </a>
           </div>
         </div>
       </section>
