@@ -1,5 +1,5 @@
 'use client';
-
+import Script from 'next/script';
 import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -401,7 +401,7 @@ export default function FaithBridgeComingSoonPage() {
             ) : null}
           </div>
 
-          <div className="mx-auto mt-10 grid max-w-lg grid-cols-3 gap-4">
+                   <div className="mx-auto mt-10 grid max-w-lg grid-cols-3 gap-4">
             {[
               { value: String(days).padStart(2, '0'), label: 'Days' },
               { value: String(hours).padStart(2, '0'), label: 'Hours' },
@@ -417,16 +417,27 @@ export default function FaithBridgeComingSoonPage() {
                 </p>
               </div>
             ))}
-          </div>          <div className="mt-8 flex justify-center gap-6 text-sm text-[#5f5851]">
+          </div>
+
+          <div className="mt-8 flex justify-center gap-6 text-sm text-[#5f5851]">
             <a href="/privacy-policy" className="underline">
               Privacy Policy
             </a>
+
             <a href="/terms-and-conditions" className="underline">
               Terms & Conditions
             </a>
           </div>
         </div>
       </section>
+
+      <Script
+        src="https://widgets.leadconnectorhq.com/loader.js"
+        data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+        data-widget-id="69fc0b15ba1fce8ed4145199"
+        data-source="WEB_USER"
+        strategy="afterInteractive"
+      />
     </div>
   );
 }
